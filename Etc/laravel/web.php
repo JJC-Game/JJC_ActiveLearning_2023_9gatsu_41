@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AppUserController;
+Route::get('/app_user/{id}', [AppUserController::class, 'app_user'])->name('al.app_user');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/app_user/{id}', [AppUserController::class, 'app_user'])->name('al.app_user');
 
 Route::get('/', function () {
     return view('welcome');
