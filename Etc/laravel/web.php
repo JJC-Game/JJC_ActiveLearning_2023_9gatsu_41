@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppUserController;
 Route::get('/app_user/{id}', [AppUserController::class, 'app_user'])->name('al.app_user');
+Route::get('/play_chara_gacha/{id}', [AppUserController::class, 'play_chara_gacha'])->name('al.play_chara_gacha');
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,6 @@ Route::get('/app_user/{id}', [AppUserController::class, 'app_user'])->name('al.a
 |
 */
 
-Route::get('/app_user/{id}', [AppUserController::class, 'app_user'])->name('al.app_user');
 
 Route::get('/', function () {
     return view('welcome');
